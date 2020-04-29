@@ -32,7 +32,10 @@ RUN yes | unminimize \
     && mkdir /var/lib/apt/dazzle-marks \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
 
-RUN sudo apt install npm
+RUN sudo apt install curl
+RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo bash -
+RUN sudo apt-get install -y nodejs
+RUN sudo apt-get install -y npm
 
 ENV LANG=en_US.UTF-8
 
