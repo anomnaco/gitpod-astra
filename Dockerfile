@@ -32,6 +32,8 @@ RUN yes | unminimize \
     && mkdir /var/lib/apt/dazzle-marks \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
 
+RUN sudo apt install npm
+
 ENV LANG=en_US.UTF-8
 
 ### Git ###
